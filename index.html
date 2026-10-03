@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maison Croûte & Cannelé — Boulangerie artisanale à Bordeaux</title>
+<meta name="description" content="Boulangerie artisanale bordelaise : levain vivant de 1998, farines de Gironde, cannelés cuits en cuivre. Quartier Saint-Pierre, Bordeaux.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        crust: '#2a160c',
+        cannele: '#7a3b14',
+        flour: '#f6efe2',
+        butter: '#f3c969',
+        wine: '#6b1d2a',
+        ember: '#e2561f'
+      },
+      fontFamily: {
+        display: ['"Fraunces"', 'serif'],
+        sans: ['"Hanken Grotesk"', 'sans-serif'],
+        mono: ['"DM Mono"', 'monospace']
+      }
+    }
+  }
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,900;1,9..144,300;1,9..144,600;1,9..144,900&family=Hanken+Grotesk:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+<style>
+html{scroll-behavior:smooth}
+body{background:#f6efe2;color:#2a160c;font-family:'Hanken Grotesk',sans-serif;overflow-x:hidden}
+::selection{background:#e2561f;color:#f6efe2}
+.grain::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.18;mix-blend-mode:overlay;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>")}
+.ulink{position:relative;display:inline-block}
+.ulink::after{content:"";position:absolute;left:0;bottom:-3px;height:2px;width:100%;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.ulink:hover::after{transform:scaleX(1);transform-origin:left}
+:focus-visible{outline:3px solid #e2561f;outline-offset:3px}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="fixed top-0 inset-x-0 z-50 mix-blend-difference text-flour">
+<style>
+@keyframes navin{from{opacity:0;transform:translateY(-1.5rem)}to{opacity:1;transform:none}}
+.navin{animation:navin 1.2s .2s cubic-bezier(.16,1,.3,1) both}
+</style>
+<div class="navin flex items-center justify-between px-5 md:px-10 py-5">
+<a href="#top" class="font-display font-black text-xl md:text-2xl tracking-tight">Croûte&nbsp;<span class="italic font-light">&amp;</span>&nbsp;Cannelé</a>
+<nav class="hidden md:flex gap-8 font-mono text-xs uppercase tracking-widest">
+<a href="#manifeste" class="ulink">Manifeste</a>
+<a href="#fournee" class="ulink">La fournée</a>
+<a href="#levain" class="ulink">Le levain</a>
+<a href="#carte" class="ulink">La carte</a>
+<a href="#visite" class="ulink">Passer</a>
+</nav>
+<a href="#visite" class="font-mono text-xs uppercase tracking-widest border border-current rounded-full px-4 py-2 hover:bg-flour hover:text-crust transition-colors duration-500">Ouvert · 6h30</a>
+</div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="relative min-h-[100svh] bg-crust text-flour overflow-hidden grain flex flex-col justify-end">
+<style>
+@keyframes heroimg{from{clip-path:inset(100% 0 0 0);transform:scale(1.25)}to{clip-path:inset(0 0 0 0);transform:scale(1)}}
+@keyframes rise{from{opacity:0;transform:translateY(110%) rotate(3deg)}to{opacity:1;transform:none}}
+@keyframes fadeup{from{opacity:0;transform:translateY(2rem)}to{opacity:1;transform:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(4%,-6%) scale(1.15)}}
+.h-img{animation:heroimg 1.8s .1s cubic-bezier(.16,1,.3,1) both}
+.h-line{display:block;overflow:hidden;padding-bottom:.08em}
+.h-line>span{display:block;animation:rise 1.4s cubic-bezier(.16,1,.3,1) both}
+.h-l1>span{animation-delay:.5s}.h-l2>span{animation-delay:.7s}.h-l3>span{animation-delay:.9s}
+.h-fade{animation:fadeup 1.2s 1.3s cubic-bezier(.16,1,.3,1) both}
+.stamp{animation:spin 24s linear infinite}
+.glow{animation:drift 14s ease-in-out infinite}
+@supports (animation-timeline: view()){
+@media (prefers-reduced-motion: no-preference){
+.h-parallax{animation:hpar linear both;animation-timeline:view();animation-range:exit 0% exit 100%}
+}}
+@keyframes hpar{to{transform:translateY(25%) scale(1.1)}}
+</style>
+<div class="absolute -top-40 -left-40 w-[60vw] h-[60vw] rounded-full bg-ember/40 blur-[120px] glow"></div>
+<div class="absolute -bottom-40 right-0 w-[50vw] h-[50vw] rounded-full bg-butter/20 blur-[120px] glow" style="animation-delay:-6s"></div>
+
+<div class="absolute top-0 right-0 w-full md:w-[52%] h-[62%] md:h-full">
+<div class="h-img h-full w-full overflow-hidden md:rounded-bl-[14rem]">
+<img class="h-parallax w-full h-full object-cover" src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=1600&q=80" alt="Pain de campagne doré posé sur une planche en bois, mie et croûte craquelée">
+<div class="absolute inset-0 bg-gradient-to-t from-crust via-crust/30 to-transparent md:bg-gradient-to-r md:from-crust md:via-transparent"></div>
+</div>
+</div>
+
+<div class="relative z-10 px-5 md:px-10 pb-12 md:pb-16 pt-[55vh] md:pt-40">
+<p class="h-fade font-mono text-xs md:text-sm uppercase tracking-[.3em] text-butter mb-6">Boulangerie artisanale · Bordeaux Saint-Pierre · depuis 1998</p>
+<h1 class="font-display font-black leading-[.82] tracking-[-.045em] text-[clamp(3.6rem,14.5vw,15rem)]">
+<span class="h-line h-l1"><span>Le pain</span></span>
+<span class="h-line h-l2"><span class="italic font-light text-butter">qui sent</span></span>
+<span class="h-line h-l3"><span>la Garonne.</span></span>
+</h1>
+<div class="h-fade mt-10 flex flex-col md:flex-row md:items-end gap-8 md:gap-16">
+<p class="max-w-md text-flour/80 text-lg leading-relaxed">Un levain de vingt-huit ans, des farines de Gironde moulues sur pierre, et des cannelés cuits dans le cuivre. Chaque aube, la même promesse : une croûte qui chante.</p>
+<div class="flex flex-wrap gap-4">
+<a href="#carte" class="group inline-flex items-center gap-3 bg-ember text-flour rounded-full pl-7 pr-3 py-3 font-medium hover:bg-butter hover:text-crust transition-colors duration-500">Voir la carte <span class="w-10 h-10 rounded-full bg-crust text-flour grid place-items-center group-hover:rotate-45 transition-transform duration-500"><i class="fa-solid fa-arrow-right"></i></span></a>
+<a href="#visite" class="inline-flex items-center gap-3 border border-flour/40 rounded-full px-7 py-3 hover:bg-flour hover:text-crust transition-colors duration-500">Commander pour demain</a>
+</div>
+</div>
+</div>
+
+<div class="stamp hidden md:grid absolute right-12 bottom-12 w-36 h-36 place-items-center z-10">
+<svg viewBox="0 0 100 100" class="absolute inset-0 w-full h-full"><defs><path id="c" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs><text font-size="9.5" fill="#f3c969" font-family="DM Mono" letter-spacing="3"><textPath href="#c">LEVAIN VIVANT · FARINE LOCALE · BEURRE AOP ·</textPath></text></svg>
+<i class="fa-solid fa-wheat-awn text-3xl text-butter"></i>
+</div>
+</section>
+
+<!-- MARQUEE -->
+<section class="bg-butter text-crust overflow-hidden border-y-2 border-crust py-5" aria-hidden="true">
+<style>
+@keyframes marq{to{transform:translateX(-50%)}}
+.marq{display:flex;width:max-content;animation:marq 38s linear infinite}
+.marq:hover{animation-play-state:paused}
+</style>
+<div class="marq font-display font-black italic text-4xl md:text-6xl tracking-tight whitespace-nowrap">
+<span class="px-6">Tradition ✺ Levain ✺ Cannelé ✺ Baguette ✺ Pain de campagne ✺ Viennoiserie ✺ Feu de bois ✺ Fait ici ✺</span>
+<span class="px-6">Tradition ✺ Levain ✺ Cannelé ✺ Baguette ✺ Pain de campagne ✺ Viennoiserie ✺ Feu de bois ✺ Fait ici ✺</span>
+</div>
+</section>
+
+<!-- MANIFESTE -->
+<section id="manifeste" class="relative px-5 md:px-10 py-28 md:py-44 bg-flour overflow-hidden">
+<style>@media (prefers-reduced-motion: no-preference) { @supports (animation-timeline: view()) { .reveal { animation: reveal both cubic-bezier(0.16, 1, 0.3, 1); animation-timeline: view(); animation-range: entry 0% entry 90%; } } } @keyframes reveal { from { opacity: 0; transform: translateY(3rem) scale(0.98); } to { opacity: 1; transform: none; } }
+@supports (animation-timeline: view()){
+@media (prefers-reduced-motion: no-preference){
+.fill span{animation:fillw linear both;animation-timeline:view();animation-range:entry 40% cover 45%}
+.zoomimg img{animation:zin linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+}}
+@keyframes fillw{from{opacity:.15}to{opacity:1}}
+@keyframes zin{from{transform:scale(1.3) translateY(-6%)}to{transform:scale(1) translateY(6%)}}
+</style>
+<p class="reveal font-mono text-xs uppercase tracking-[.3em] text-ember mb-10">01 — Manifeste</p>
+<div class="grid md:grid-cols-12 gap-10">
+<h2 class="fill md:col-span-9 font-display font-light text-[clamp(2rem,5.6vw,5.5rem)] leading-[1.02] tracking-[-.03em]">
+<span>Nous ne </span><span class="font-black italic text-cannele">fabriquons </span><span>pas du pain. </span><span>Nous </span><span class="font-black italic text-cannele">veillons </span><span>sur une pâte vivante, </span><span>nous la laissons </span><span>respirer dix-huit heures, </span><span>puis nous l'envoyons </span><span class="font-black italic text-ember">au feu.</span>
+</h2>
+</div>
+<div class="grid md:grid-cols-12 gap-8 mt-20 md:mt-28 items-start">
+<div class="reveal zoomimg md:col-span-5 md:col-start-2 aspect-[4/5] overflow-hidden rounded-t-full">
+<img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=1000&q=80" alt="Boulanger enfarinant ses mains avant de façonner la pâte">
+</div>
+<div class="md:col-span-4 md:col-start-8 md:mt-40 space-y-6">
+<p class="reveal text-lg leading-relaxed">Tout a commencé en 1998, rue des Argentiers, avec un pot de levain offert par une grand-mère de Saint-Émilion et un four à sole de 1962. Le four est toujours là. Le levain aussi : on le nourrit deux fois par jour, il a un prénom — Gaston.</p>
+<p class="reveal text-lg leading-relaxed text-crust/70">Notre blé vient de trois fermes à moins de soixante kilomètres. Notre beurre, de Charentes-Poitou. Notre sel, de Guérande. Pas d'additif, pas de raccourci, pas de pardon.</p>
+<a href="#levain" class="reveal ulink font-medium text-ember">Rencontrer Gaston <i class="fa-solid fa-arrow-right ml-1"></i></a>
+</div>
+</div>
+</section>
+
+<!-- LA FOURNÉE : bento -->
+<section id="fournee" class="bg-crust text-flour px-5 md:px-10 py-24 md:py-40 relative overflow-hidden grain">
+<div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+<div>
+<p class="reveal font-mono text-xs uppercase tracking-[.3em] text-butter mb-6">02 — La fournée du jour</p>
+<h2 class="reveal font-display font-black tracking-[-.04em] leading-[.88] text-[clamp(3rem,9vw,9rem)]">Sorti <span class="italic font-light text-butter">du four</span><br>ce matin.</h2>
+</div>
+<p class="reveal max-w-xs text-flour/70">Quatre fournées, de 6 h 30 à 16 h. Quand c'est vide, c'est vide : on ne recuit pas hier.</p>
+</div>
+
+<style>
+.card{position:relative;overflow:hidden;border-radius:1.75rem;transition:transform .8s cubic-bezier(.16,1,.3,1),box-shadow .8s}
+.card img{transition:transform 1.4s cubic-bezier(.16,1,.3,1)}
+.card:hover img{transform:scale(1.1) rotate(1deg)}
+.card:hover{transform:translateY(-8px);box-shadow:0 30px 60px -20px rgba(226,86,31,.5)}
+.card .tag{transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.card:hover .tag{transform:translateX(6px)}
+</style>
+<div class="grid grid-cols-1 md:grid-cols-6 md:grid-rows-[22rem_20rem_20rem] gap-4 md:gap-5">
+<article class="reveal card md:col-span-3 md:row-span-2 min-h-[26rem]">
+<img class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=1200&q=80" alt="Baguettes tradition croustillantes alignées dans un panier">
+<div class="absolute inset-0 bg-gradient-to-t from-crust/90 via-crust/10 to-transparent"></div>
+<div class="absolute bottom-0 p-7"><span class="tag font-mono text-xs uppercase tracking-widest text-butter">6 h 30 · 1,35 €</span><h3 class="font-display font-black text-4xl md:text-5xl tracking-tight mt-2">La Tradition<br><span class="italic font-light">Garonne</span></h3><p class="text-flour/80 mt-2 max-w-sm">Fermentation de 20 heures, croûte ambrée, mie alvéolée qui sent la noisette.</p></div>
+</article>
+<article class="reveal card md:col-span-3 min-h-[18rem]">
+<img class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=1200&q=80" alt="Croissants pur beurre dorés sur une plaque">
+<div class="absolute inset-0 bg-gradient-to-t from-crust/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-7"><span class="tag font-mono text-xs uppercase tracking-widest text-butter">7 h 00 · 1,60 €</span><h3 class="font-display font-black text-3xl md:text-4xl tracking-tight mt-1">Croissant <span class="italic font-light">aux 27 feuilles</span></h3></div>
+</article>
+<article class="reveal card md:col-span-2 bg-ember text-flour p-7 flex flex-col justify-between min-h-[16rem]">
+<i class="fa-solid fa-fire-flame-curved text-4xl text-butter"></i>
+<div><h3 class="font-display font-black text-3xl tracking-tight">Sole de 1962</h3><p class="mt-2 text-flour/90">Cuisson à 260 °C sur pierre réfractaire. C'est elle qui donne le « chant » : le crépitement de la croûte à la sortie.</p></div>
+</article>
+<article class="reveal card md:col-span-1 bg-butter text-crust p-6 flex flex-col justify-between min-h-[12rem]">
+<span class="font-display font-black text-6xl leading-none">18<span class="text-2xl">h</span></span>
+<p class="text-sm font-medium">de pousse lente, minimum.</p>
+</article>
+<article class="reveal card md:col-span-3 min-h-[18rem]">
+<img class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=1200&q=80" alt="Pain au levain tranché montrant une mie dense et alvéolée">
+<div class="absolute inset-0 bg-gradient-to-t from-crust/90 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-7"><span class="tag font-mono text-xs uppercase tracking-widest text-butter">9 h 00 · 6,40 € le kilo</span><h3 class="font-display font-black text-3xl md:text-4xl tracking-tight mt-1">Le Gaston <span class="italic font-light">— pain de campagne</span></h3></div>
+</article>
+</div>
+</section>
+
+<!-- LE LEVAIN : sticky storytelling -->
+<section id="levain" class="relative bg-flour">
+<style>
+.lv-step{min-height:80vh;display:flex;flex-direction:column;justify-content:center}
+@supports (animation-timeline: view()){
+@media (prefers-reduced-motion: no-preference){
+.lv-num{animation:lvnum linear both;animation-timeline:view();animation-range:entry 20% exit 80%}
+}}
+@keyframes lvnum{0%{opacity:.1;transform:translateX(-2rem)}50%{opacity:1;transform:none}100%{opacity:.1;transform:translateX(2rem)}}
+</style>
+<div class="grid md:grid-cols-2">
+<div class="md:sticky md:top-0 md:h-screen relative h-[60vh] overflow-hidden bg-crust">
+<img class="absolute inset-0 w-full h-full object-cover opacity-90" src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=1400&q=80" alt="Pâte à levain en cours de fermentation dans un bocal en verre">
+<div class="absolute inset-0 bg-gradient-to-b from-crust/50 to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8 text-flour">
+<p class="font-mono text-xs uppercase tracking-[.3em] text-butter mb-3">03 — Le levain</p>
+<h2 class="font-display font-black text-[clamp(2.6rem,6vw,6rem)] leading-[.9] tracking-[-.04em]">Gaston,<br><span class="italic font-light text-butter">28 ans</span><br>et toutes ses dents.</h2>
+</div>
+</div>
+<div class="px-5 md:px-14 py-16 md:py-32">
+<div class="lv-step"><span class="lv-num font-display font-black italic text-[8rem] leading-none text-ember">I</span><h3 class="reveal font-display font-black text-4xl tracking-tight mb-4">Le rafraîchi</h3><p class="reveal text-lg leading-relaxed max-w-md text-crust/80">À 5 h du matin, Gaston reçoit son premier repas : farine de seigle, eau de source, un peu de patience. Il double de volume en quatre heures. On le sent avant de le voir : pomme verte, yaourt, pain tiède.</p></div>
+<div class="lv-step"><span class="lv-num font-display font-black italic text-[8rem] leading-none text-ember">II</span><h3 class="reveal font-display font-black text-4xl tracking-tight mb-4">Le pétrin lent</h3><p class="reveal text-lg leading-relaxed max-w-md text-crust/80">Pas de coup de force. La pâte repose, se plie, se tend toute seule. Pendant dix-huit heures, les enzymes font le travail que la machine ne saura jamais faire : digérer, aromatiser, caraméliser.</p></div>
+<div class="lv-step"><span class="lv-num font-display font-black italic text-[8rem] leading-none text-ember">III</span><h3 class="reveal font-display font-black text-4xl tracking-tight mb-4">Le coup de lame</h3><p class="reveal text-lg leading-relaxed max-w-md text-crust/80">Un geste, une seconde. La lame trace l'« oreille » qui s'ouvrira au four. Chacun de nos boulangers a sa signature : on reconnaît le pain de Léa à sa spirale, celui de Mathis à sa feuille de blé.</p></div>
+<div class="lv-step"><span class="lv-num font-display font-black italic text-[8rem] leading-none text-ember">IV</span><h3 class="reveal font-display font-black text-4xl tracking-tight mb-4">Le chant</h3><p class="reveal text-lg leading-relaxed max-w-md text-crust/80">Sortie du four, la croûte crépite pendant une minute. Les anciens appellent ça « le pain qui chante ». Si vous l'entendez dans le sac en rentrant chez vous, c'est qu'on a bien travaillé.</p></div>
+</div>
+</div>
+</section>
+
+<!-- CANNELÉ : horizontal pinned -->
+<section id="cannele" class="relative bg-wine text-flour" style="view-timeline-name:--pin;view-timeline-axis:block">
+<style>
+.hz-wrap{height:auto}
+.hz-sticky{position:relative;overflow:hidden}
+.hz-track{display:flex;flex-direction:column;gap:1.5rem;padding:5rem 1.25rem}
+.hz-panel{flex:none}
+@media (min-width:768px){
+.hz-wrap{height:380vh}
+.hz-sticky{position:sticky;top:0;height:100vh;display:flex;align-items:center}
+.hz-track{flex-direction:row;gap:3rem;padding:0 5vw;width:max-content;align-items:center}
+}
+@supports (animation-timeline: view()){
+@media (prefers-reduced-motion: no-preference) and (min-width:768px){
+.hz-track{animation:hzmove linear both;animation-timeline:--pin;animation-range:contain 0% contain 100%}
+.hz-bar{animation:hzbar linear both;animation-timeline:--pin;animation-range:contain 0% contain 100%;transform-origin:left}
+}}
+@keyframes hzmove{from{transform:translateX(0)}to{transform:translateX(calc(-100% + 100vw))}}
+@keyframes hzbar{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.hz-img{transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.hz-panel:hover .hz-img{transform:scale(1.07)}
+</style>
+<div class="hz-wrap">
+<div class="hz-sticky">
+<div class="hz-track">
+<div class="hz-panel w-full md:w-[42vw]">
+<p class="font-mono text-xs uppercase tracking-[.3em] text-butter mb-6">04 — Le cannelé</p>
+<h2 class="font-display font-black leading-[.85] tracking-[-.045em] text-[clamp(3.4rem,9vw,9.5rem)]">Noir dehors,<br><span class="italic font-light text-butter">tendre dedans.</span></h2>
+<p class="mt-8 max-w-md text-flour/80 text-lg">Le trésor de Bordeaux, selon nous. Une croûte caramélisée presque brûlée, un cœur de crème pâtissière au rhum et à la vanille de Madagascar. Quatre cents par jour, pas un de plus.</p>
+</div>
+<div class="hz-panel w-full md:w-[30vw] aspect-[4/5] md:h-[70vh] md:aspect-auto relative overflow-hidden rounded-[2rem]">
+<img class="hz-img w-full h-full object-cover" src="https://images.unsplash.com/photo-1626803775151-61d756612f97?auto=format&fit=crop&w=1000&q=80" alt="Cannelés bordelais caramélisés posés sur une table">
+<span class="absolute top-5 left-5 bg-butter text-crust font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full">Étape 1 · Le moule</span>
+</div>
+<div class="hz-panel w-full md:w-[26vw] bg-butter text-crust rounded-[2rem] p-8 md:p-10 md:h-[56vh] flex flex-col justify-between">
+<i class="fa-solid fa-mortar-pestle text-4xl text-wine"></i>
+<div><h3 class="font-display font-black text-4xl tracking-tight leading-none">Le cuivre<br><span class="italic font-light">et la cire d'abeille</span></h3><p class="mt-4">Chaque moule est badigeonné à la main d'un mélange de cire et de beurre. C'est lui qui offre la croûte vernie, et le cannelé qui se démoule d'un seul souffle.</p></div>
+</div>
+<div class="hz-panel w-full md:w-[30vw] aspect-[4/5] md:h-[70vh] md:aspect-auto relative overflow-hidden rounded-[2rem]">
+<img class="hz-img w-full h-full object-cover" src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=1000&q=80" alt="Pâtisseries artisanales et douceurs dorées en vitrine">
+<span class="absolute top-5 left-5 bg-butter text-crust font-mono text-xs uppercase tracking-widest px-3 py-1 rounded-full">Étape 2 · Le repos</span>
+</div>
+<div class="hz-panel w-full md:w-[26vw] border-2 border-flour/30 rounded-[2rem] p-8 md:p-10 md:h-[56vh] flex flex-col justify-between">
+<span class="font-display font-black text-8xl leading-none text-butter">48<span class="text-3xl">h</span></span>
+<div><h3 class="font-display font-black text-3xl tracking-tight">Appareil reposé</h3><p class="mt-3 text-flour/80">Deux jours au froid pour que le rhum, la vanille et le lait se marient. Impatient, vous ? Nous aussi.</p></div>
+</div>
+<div class="hz-panel w-full md:w-[34vw] pr-0 md:pr-[8vw]">
+<h3 class="font-display font-black italic text-[clamp(2.4rem,5vw,5rem)] leading-[.95] tracking-tight">« Croûte qui craque, cœur qui coule. »</h3>
+<p class="mt-6 font-mono text-xs uppercase tracking-widest text-butter">— Notre seule règle depuis 1998</p>
+<a href="#carte" class="mt-8 inline-flex items-center gap-3 bg-flour text-wine rounded-full px-7 py-3 font-medium hover:bg-butter transition-colors duration-500">Les commander <i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+<div class="hidden md:block absolute bottom-8 left-[5vw] right-[5vw] h-[3px] bg-flour/20"><div class="hz-bar h-full bg-butter" style="transform:scaleX(1)"></div></div>
+</div>
+</div>
+</section>
+
+<!-- CARTE -->
+<section id="carte" class="bg-flour px-5 md:px-10 py-24 md:py-40">
+<style>
+.menu-row{display:grid;grid-template-columns:1fr auto;gap:1rem;align-items:baseline;padding:1.5rem 0;border-bottom:1px solid rgba(42,22,12,.2);transition:padding .6s cubic-bezier(.16,1,.3,1),color .4s,background .4s}
+.menu-row:hover{padding-left:1.25rem;padding-right:1.25rem;background:#2a160c;color:#f6efe2}
+.menu-row:hover .price{color:#f3c969}
+.menu-row h4{transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.menu-row:hover h4{transform:translateX(6px)}
+</style>
+<div class="grid md:grid-cols-12 gap-10 md:gap-16">
+<div class="md:col-span-5">
+<div class="md:sticky md:top-28">
+<p class="reveal font-mono text-xs uppercase tracking-[.3em] text-ember mb-6">05 — La carte</p>
+<h2 class="reveal font-display font-black text-[clamp(3rem,8vw,8rem)] leading-[.85] tracking-[-.045em]">Ce qu'on<br><span class="italic font-light text-cannele">met dans</span><br>le sac.</h2>
+<div class="reveal mt-10 aspect-[4/3] overflow-hidden rounded-[2rem] hidden md:block">
+<img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?auto=format&fit=crop&w=1000&q=80" alt="Étal de boulangerie avec pains et viennoiseries en vitrine">
+</div>
+</div>
+</div>
+<div class="md:col-span-7">
+<h3 class="reveal font-mono text-xs uppercase tracking-[.3em] mb-2 text-crust/60">Les pains</h3>
+<div class="reveal menu-row"><div><h4 class="font-display font-black text-2xl md:text-3xl tracking-tight">La Tradition Garonne</h4><p class="text-sm opacity-70 mt-1">Baguette 250 g, fermentation 20 h</p></div><span class="price font-mono text-lg">1,35 €</span></div>
+<div class="reveal menu-row"><div><h4 class="font-display font-black text-2xl md:text-3xl tracking-tight">Le Gaston</h4><p class="text-sm opacity-70 mt-1">Campagne au levain, blé et seigle, 900 g</p></div><span class="price font-mono text-lg">5,80 €</span></div>
+<div class="reveal menu-row"><div><h4 class="font-display font-black text-2xl md:text-3xl tracking-tight">Le Noir des Chartrons</h4><p class="text-sm opacity-70 mt-1">Noix, figues sèches, seigle complet</p></div><span class="price font-mono text-lg">7,20 €</span></div>
+<h3 class="reveal font-mono text-xs uppercase tracking-[.3em] mt-14 mb-2 text-crust/60">Les viennoiseries</h3>
+<div class="reveal menu-row"><div><h4 class="font-display font-black text-2xl md:text-3xl tracking-tight">Croissant aux 27 feuilles</h4><p class="text-sm opacity-70 mt-1">Beurre AOP Charentes-Poitou</p></div><span class="price font-mono text-lg">1,60 €</span></div>
+<div class="reveal menu-row"><div><h4 class="font-display font-black text-2xl md:text-3xl tracking-tight">Pain au chocolat noir 70 %</h4><p class="text-sm opacity-70 mt-1">Deux barres, pas une de moins</p></div><span class="price font-mono text-lg">1,90 €</span></div>
+<div class="reveal menu-row"><div><h4 class="font-display font-black text-2xl md:text-3xl tracking-tight">Kouign-amann du Médoc</h4><p class="text-sm opacity-70 mt-1">Caramel au sel de Guérande</p></div><span class="price font-mono text-lg">3,40 €</span></div>
+<h3 class="reveal font-mono text-xs uppercase tracking-[.3em] mt-14 mb-2 text-crust/60">Les douceurs bordelaises</h3>
+<div class="reveal menu-row"><div><h4 class="font-display font-black text-2xl md:text-3xl tracking-tight">Cannelé rhum-vanille</h4><p class="text-sm opacity-70 mt-1">Cuit dans le cuivre, 400 par jour</p></div><span class="price font-mono text-lg">2,60 €</span></div>
+<div class="reveal menu-row"><div><h4 class="font-display font-black text-2xl md:text-3xl tracking-tight">Boîte de six cannelés</h4><p class="text-sm opacity-70 mt-1">Boîte kraft, pour offrir (ou pas)</p></div><span class="price font-mono text-lg">14,00 €</span></div>
+<div class="reveal menu-row"><div><h4 class="font-display font-black text-2xl md:text-3xl tracking-tight">Dunes blanches</h4><p class="text-sm opacity-70 mt-1">Chouquettes fourrées à la crème de Cap Ferret</p></div><span class="price font-mono text-lg">4,20 €</span></div>
+</div>
+</div>
+</section>
+
+<!-- CHIFFRES + CITATIONS -->
+<section class="relative bg-ember text-flour overflow-hidden grain">
+<style>
+@keyframes counter-in{from{opacity:0;transform:translateY(4rem) rotate(-3deg)}to{opacity:1;transform:none}}
+@supports (animation-timeline: view()){
+@media (prefers-reduced-motion: no-preference){
+.num{animation:counter-in both cubic-bezier(.16,1,.3,1);animation-timeline:view();animation-range:entry 0% entry 80%}
+}}
+.quote{transition:transform .8s cubic-bezier(.16,1,.3,1),background .6s}
+.quote:hover{transform:translateY(-8px) rotate(-1deg);background:#f6efe2;color:#2a160c}
+</style>
+<div class="px-5 md:px-10 py-24 md:py-36">
+<p class="reveal font-mono text-xs uppercase tracking-[.3em] text-butter mb-10">06 — En chiffres &amp; en mots</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-6 border-b border-flour/30 pb-16">
+<div class="num"><div class="font-display font-black text-[clamp(3.5rem,9vw,9rem)] leading-none tracking-[-.05em]">28</div><p class="mt-2 font-mono text-xs uppercase tracking-widest">ans de levain</p></div>
+<div class="num"><div class="font-display font-black text-[clamp(3.5rem,9vw,9rem)] leading-none tracking-[-.05em]">3</div><p class="mt-2 font-mono text-xs uppercase tracking-widest">fermes partenaires</p></div>
+<div class="num"><div class="font-display font-black text-[clamp(3.5rem,9vw,9rem)] leading-none tracking-[-.05em]">400</div><p class="mt-2 font-mono text-xs uppercase tracking-widest">cannelés par jour</p></div>
+<div class="num"><div class="font-display font-black text-[clamp(3.5rem,9vw,9rem)] leading-none tracking-[-.05em]">0</div><p class="mt-2 font-mono text-xs uppercase tracking-widest">additif, jamais</p></div>
+</div>
+<div class="grid md:grid-cols-3 gap-5 mt-16">
+<figure class="reveal quote bg-crust rounded-[1.75rem] p-8"><p class="font-display italic text-2xl leading-snug">« Le seul pain de Bordeaux qui me fait rater mon tram. Je reste sur le trottoir à le manger. »</p><figcaption class="mt-6 font-mono text-xs uppercase tracking-widest text-butter">Camille R. · Saint-Michel</figcaption></figure>
+<figure class="reveal quote bg-crust rounded-[1.75rem] p-8 md:mt-12"><p class="font-display italic text-2xl leading-snug">« Les cannelés de ma grand-mère, en mieux — qu'elle me pardonne. »</p><figcaption class="mt-6 font-mono text-xs uppercase tracking-widest text-butter">Julien M. · Chartrons</figcaption></figure>
+<figure class="reveal quote bg-crust rounded-[1.75rem] p-8"><p class="font-display italic text-2xl leading-snug">« On fait la queue à 7 h, et c'est l'un des meilleurs moments de la journée. »</p><figcaption class="mt-6 font-mono text-xs uppercase tracking-widest text-butter">Sofia L. · Bastide</figcaption></figure>
+</div>
+</div>
+</section>
+
+<!-- ATELIERS / COMMANDE -->
+<section class="bg-flour px-5 md:px-10 py-24 md:py-40 overflow-hidden">
+<style>
+.pic{transition:transform 1s cubic-bezier(.16,1,.3,1)}
+.pic:hover{transform:translateY(-10px) rotate(0deg)!important}
+.cta-big{position:relative;overflow:hidden}
+.cta-big::before{content:"";position:absolute;inset:0;background:#f3c969;transform:translateY(101%);transition:transform .7s cubic-bezier(.16,1,.3,1)}
+.cta-big:hover::before{transform:none}
+.cta-big>*{position:relative}
+</style>
+<div class="grid md:grid-cols-12 gap-10 items-center">
+<div class="md:col-span-6 relative h-[26rem] md:h-[40rem]">
+<div class="reveal pic absolute left-0 top-0 w-[58%] aspect-[3/4] overflow-hidden rounded-[2rem] -rotate-3 shadow-2xl shadow-cannele/30"><img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=800&q=80" alt="Mains pétrissant une pâte à pain sur un plan fariné"></div>
+<div class="reveal pic absolute right-0 bottom-0 w-[56%] aspect-[4/5] overflow-hidden rounded-t-full rotate-3 shadow-2xl shadow-cannele/30"><img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1568254183919-78a4f43a2877?auto=format&fit=crop&w=800&q=80" alt="Pains ronds rustiques tout juste sortis du four"></div>
+</div>
+<div class="md:col-span-6 md:pl-10">
+<p class="reveal font-mono text-xs uppercase tracking-[.3em] text-ember mb-6">07 — L'atelier</p>
+<h2 class="reveal font-display font-black text-[clamp(2.8rem,7vw,7rem)] leading-[.88] tracking-[-.045em]">Mettez la main<br><span class="italic font-light text-cannele">à la pâte.</span></h2>
+<p class="reveal mt-8 text-lg leading-relaxed max-w-lg text-crust/80">Chaque samedi à 14 h, Léa ouvre le fournil : douze places, un tablier, et trois heures pour apprendre à nourrir un levain, façonner une boule et inciser comme une pro. Vous repartez avec votre pain, un pot de levain et un peu de farine dans les cheveux.</p>
+<ul class="reveal mt-8 space-y-3 font-medium">
+<li class="flex gap-3"><i class="fa-solid fa-check text-ember mt-1"></i> Atelier « Pain au levain » · 65 € · 3 h</li>
+<li class="flex gap-3"><i class="fa-solid fa-check text-ember mt-1"></i> Atelier « Cannelés &amp; viennoiseries » · 75 € · 3 h 30</li>
+<li class="flex gap-3"><i class="fa-solid fa-check text-ember mt-1"></i> Atelier enfants (7–12 ans) · 35 € · 1 h 30</li>
+</ul>
+<a href="#visite" class="reveal cta-big mt-10 inline-flex items-center gap-4 bg-crust text-flour hover:text-crust rounded-full px-8 py-4 font-medium transition-colors duration-500"><span>Réserver ma place</span><i class="fa-solid fa-arrow-right"></i></a>
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+<section class="bg-crust text-flour px-5 md:px-10 py-24 md:py-36">
+<style>
+details.faq{border-top:1px solid rgba(246,239,226,.25);padding:1.5rem 0}
+details.faq:last-of-type{border-bottom:1px solid rgba(246,239,226,.25)}
+details.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:1rem;align-items:center;font-family:Fraunces,serif;font-weight:900;font-size:clamp(1.3rem,2.6vw,2.2rem);letter-spacing:-.02em;transition:color .4s}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary:hover{color:#f3c969}
+details.faq summary i{transition:transform .6s cubic-bezier(.16,1,.3,1);flex:none}
+details.faq[open] summary i{transform:rotate(135deg);color:#e2561f}
+details.faq p{margin-top:1rem;max-width:44rem;color:rgba(246,239,226,.75);line-height:1.7}
+</style>
+<div class="grid md:grid-cols-12 gap-10">
+<div class="md:col-span-4"><p class="reveal font-mono text-xs uppercase tracking-[.3em] text-butter mb-6">08 — Questions</p><h2 class="reveal font-display font-black text-[clamp(2.6rem,6vw,6rem)] leading-[.9] tracking-[-.04em]">Vous<br><span class="italic font-light text-butter">demandez.</span></h2></div>
+<div class="md:col-span-8">
+<details class="faq reveal" open><summary>Peut-on commander à l'avance ?<i class="fa-solid fa-plus"></i></summary><p>Oui, jusqu'à la veille 18 h, en boutique ou par téléphone. Vos pains vous attendent dans un sac en papier à votre nom, à partir de 6 h 30.</p></details>
+<details class="faq reveal"><summary>Avez-vous des options sans gluten ou vegan ?<i class="fa-solid fa-plus"></i></summary><p>Nos baguettes et pains au levain sont naturellement vegan. Nous travaillons le blé : nous ne pouvons pas garantir de produit sans gluten, mais nous vous conseillons volontiers.</p></details>
+<details class="faq reveal"><summary>Livrez-vous à Bordeaux Métropole ?<i class="fa-solid fa-plus"></i></summary><p>Le samedi matin, nos coursiers à vélo cargo livrent Saint-Pierre, Chartrons, Victoire et la Bastide avant 10 h. Commande minimum : 15 €.</p></details>
+<details class="faq reveal"><summary>Les cannelés se conservent-ils ?<i class="fa-solid fa-plus"></i></summary><p>Le jour même, ils sont à leur sommet. Le lendemain, 8 minutes à 180 °C leur rendent leur croûte. Pas de micro-ondes : jamais, on vous voit.</p></details>
+<details class="faq reveal"><summary>Où achetez-vous vos farines ?<i class="fa-solid fa-plus"></i></summary><p>Auprès de trois exploitations familiales de Gironde et de Dordogne, moulues sur pierre au moulin de Cadillac. Blé ancien, sans traitement après récolte.</p></details>
+</div>
+</div>
+</section>
+
+<!-- VISITE -->
+<section id="visite" class="relative bg-butter text-crust px-5 md:px-10 py-24 md:py-36 overflow-hidden">
+<style>
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-6deg)}50%{transform:translateY(-14px) rotate(6deg)}}
+.bob{animation:bob 6s ease-in-out infinite}
+.info-card{transition:transform .7s cubic-bezier(.16,1,.3,1),box-shadow .7s}
+.info-card:hover{transform:translateY(-8px);box-shadow:12px 12px 0 #2a160c}
+.fld{width:100%;background:transparent;border-bottom:2px solid #2a160c;padding:.9rem 0;font-size:1.1rem;transition:border-color .4s,padding .4s}
+.fld:focus{outline:none;border-color:#e2561f;padding-left:.75rem}
+.fld::placeholder{color:rgba(42,22,12,.5)}
+</style>
+<i class="fa-solid fa-bread-slice bob absolute right-[8%] top-16 text-7xl md:text-9xl text-ember/30"></i>
+<p class="reveal font-mono text-xs uppercase tracking-[.3em] mb-6">09 — Nous trouver</p>
+<h2 class="reveal font-display font-black text-[clamp(3.4rem,12vw,13rem)] leading-[.82] tracking-[-.05em]">Rendez-vous<br><span class="italic font-light text-wine">à l'aube.</span></h2>
+<div class="grid md:grid-cols-12 gap-6 mt-16">
+<div class="md:col-span-7 grid sm:grid-cols-2 gap-6">
+<div class="reveal info-card bg-flour rounded-[1.75rem] p-8 border-2 border-crust"><i class="fa-solid fa-location-dot text-2xl text-ember"></i><h3 class="font-display font-black text-2xl mt-4">La boutique</h3><p class="mt-2">14 rue des Argentiers<br>33000 Bordeaux<br><span class="text-sm opacity-70">Tram C · arrêt Place du Palais</span></p></div>
+<div class="reveal info-card bg-crust text-flour rounded-[1.75rem] p-8 border-2 border-crust"><i class="fa-solid fa-clock text-2xl text-butter"></i><h3 class="font-display font-black text-2xl mt-4">Horaires</h3><p class="mt-2">Mar – Sam : 6 h 30 – 19 h<br>Dimanche : 7 h – 13 h<br><span class="text-butter">Lundi : on dort.</span></p></div>
+<div class="reveal info-card bg-flour rounded-[1.75rem] p-8 border-2 border-crust"><i class="fa-solid fa-phone text-2xl text-ember"></i><h3 class="font-display font-black text-2xl mt-4">Appeler</h3><p class="mt-2"><a href="tel:+33556000000" class="ulink">05 56 00 00 00</a><br><a href="mailto:bonjour@croute-cannele.fr" class="ulink">bonjour@croute-cannele.fr</a></p></div>
+<div class="reveal info-card bg-wine text-flour rounded-[1.75rem] p-8 border-2 border-crust"><i class="fa-brands fa-instagram text-2xl text-butter"></i><h3 class="font-display font-black text-2xl mt-4">Suivre la fournée</h3><p class="mt-2">@croute.et.cannele<br><span class="text-sm opacity-80">Chaque matin à 7 h, la photo du jour.</span></p></div>
+</div>
+<form class="reveal md:col-span-5 bg-flour rounded-[2rem] border-2 border-crust p-8 md:p-10" onsubmit="event.preventDefault();var b=this.querySelector('button');b.textContent='Merci ! Votre sac vous attend ✺';b.disabled=true;">
+<h3 class="font-display font-black text-3xl tracking-tight">Réserver mon sac</h3>
+<p class="text-sm opacity-70 mt-1 mb-6">Retrait dès 6 h 30, paiement en boutique.</p>
+<label class="sr-only" for="n">Nom</label><input id="n" class="fld" type="text" placeholder="Votre nom" required>
+<label class="sr-only" for="t">Téléphone</label><input id="t" class="fld mt-4" type="tel" placeholder="Téléphone" required>
+<label class="sr-only" for="c">Commande</label><textarea id="c" class="fld mt-4 resize-none" rows="3" placeholder="2 Tradition, 1 Gaston, 6 cannelés…" required></textarea>
+<button type="submit" class="mt-8 w-full bg-crust text-flour rounded-full py-4 font-medium hover:bg-ember transition-colors duration-500 disabled:opacity-80">Envoyer ma commande</button>
+</form>
+</div>
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="relative bg-crust text-flour overflow-hidden grain">
+<style>
+.fbig{font-size:clamp(4rem,19vw,20rem);line-height:.78;letter-spacing:-.06em}
+.soc{transition:transform .6s cubic-bezier(.16,1,.3,1),background .4s,color .4s}
+.soc:hover{transform:translateY(-6px) rotate(-8deg);background:#f3c969;color:#2a160c}
+@keyframes ftdrift{0%,100%{transform:translateX(0)}50%{transform:translateX(-3%)}}
+.fdrift{animation:ftdrift 12s ease-in-out infinite}
+</style>
+<div class="px-5 md:px-10 pt-20 pb-6">
+<div class="grid md:grid-cols-12 gap-10 pb-16 border-b border-flour/20">
+<div class="md:col-span-5"><p class="font-display font-black text-3xl tracking-tight">Croûte <span class="italic font-light text-butter">&amp;</span> Cannelé</p><p class="mt-4 max-w-sm text-flour/70">Boulangerie artisanale au cœur de Bordeaux. Levain vivant, farines de Gironde, cannelés de cuivre. Fait ici, tous les matins.</p>
+<div class="flex gap-3 mt-6">
+<a href="#" aria-label="Instagram" class="soc w-12 h-12 rounded-full border border-flour/30 grid place-items-center"><i class="fa-brands fa-instagram"></i></a>
+<a href="#" aria-label="Facebook" class="soc w-12 h-12 rounded-full border border-flour/30 grid place-items-center"><i class="fa-brands fa-facebook-f"></i></a>
+<a href="#" aria-label="TikTok" class="soc w-12 h-12 rounded-full border border-flour/30 grid place-items-center"><i class="fa-brands fa-tiktok"></i></a>
+</div></div>
+<div class="md:col-span-3 md:col-start-7"><h4 class="font-mono text-xs uppercase tracking-[.3em] text-butter mb-5">Explorer</h4><ul class="space-y-3"><li><a class="ulink" href="#manifeste">Manifeste</a></li><li><a class="ulink" href="#fournee">La fournée</a></li><li><a class="ulink" href="#levain">Le levain</a></li><li><a class="ulink" href="#carte">La carte</a></li><li><a class="ulink" href="#visite">Nous trouver</a></li></ul></div>
+<div class="md:col-span-3"><h4 class="font-mono text-xs uppercase tracking-[.3em] text-butter mb-5">Aujourd'hui</h4><p class="text-flour/80">14 rue des Argentiers<br>33000 Bordeaux<br>Mar–Sam 6 h 30 – 19 h<br>Dim 7 h – 13 h</p></div>
+</div>
+<div class="fdrift fbig font-display font-black text-ember/90 select-none py-8 whitespace-nowrap overflow-hidden" aria-hidden="true">Bon pain.</div>
+<div class="flex flex-col md:flex-row justify-between gap-3 font-mono text-xs uppercase tracking-widest text-flour/50 pt-4">
+<span>© 2026 Croûte &amp; Cannelé · SARL au capital de farine</span>
+<span>Mentions légales · Confidentialité · Fait à Bordeaux avec du beurre</span>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
